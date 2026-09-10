@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="600"
+      style="border: 1px solid black"
+    ></canvas>
+
+    <script>
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+
+      /* Pravokutnik */
+      ctx.beginPath();
+      ctx.rect(10, 10, 400, 400);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      /* Krug */
+      ctx.beginPath();
+      ctx.arc(300, 300, 70, 0, 2 * Math.PI);
+      ctx.stroke(); //default crno
+
+      /* Linija */
+      ctx.beginPath();
+      ctx.moveTo(120, 220);
+      ctx.lineTo(200, 500);
+      ctx.lineTo(500, 500);
+      ctx.lineTo(120, 220);
+      ctx.strokeStyle = "Blue";
+      ctx.stroke();
+    </script>
+  </body>
+</html>
