@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marko Balasko — 4.e</title>
+    <style>
+      :root {
+        --paper: #f6f3ec;
+        --ink: #2b2620;
+        --rule: #d8cfbd;
+        --accent: #3a5a40;
+        --accent-soft: #e4ece4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Georgia", "Times New Roman", serif;
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 64px 24px 40px;
+        text-align: center;
+        border-bottom: 2px solid var(--rule);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.6rem;
+        letter-spacing: 0.5px;
+        font-weight: normal;
+      }
+
+      header p {
+        margin: 10px 0 0;
+        font-size: 1.1rem;
+        color: #5a5346;
+      }
+
+      .badges {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        font-size: 0.85rem;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border: 1px solid var(--rule);
+        border-radius: 999px;
+        padding: 4px 14px;
+      }
+
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 48px 24px 80px;
+      }
+
+      section {
+        margin-bottom: 48px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        font-weight: normal;
+        border-left: 4px solid var(--accent);
+        padding-left: 14px;
+        margin-bottom: 20px;
+      }
+
+      ul.homework {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul.homework li {
+        margin-bottom: 12px;
+      }
+
+      ul.homework a {
+        display: block;
+        padding: 14px 18px;
+        background: #fff;
+        border: 1px solid var(--rule);
+        border-radius: 4px;
+        color: var(--ink);
+        text-decoration: none;
+        transition:
+          background 0.15s ease,
+          border-color 0.15s ease;
+      }
+
+      ul.homework a:hover {
+        background: var(--accent-soft);
+        border-color: var(--accent);
+      }
+
+      ul.homework a .subject::before {
+        content: "→ ";
+        color: var(--accent);
+      }
+
+      .note {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #8a8272;
+        border-top: 1px dashed var(--rule);
+        padding-top: 16px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 24px;
+        font-size: 0.85rem;
+        color: #8a8272;
+        border-top: 2px solid var(--rule);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Marko Balasko</h1>
+      <p>Srednja škola · Razred 4.e</p>
+      <div class="badges">
+        <span class="badge">Školska godina 2026./2027.</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="homework-section">
+        <h2>Zadaće</h2>
+        <ul class="homework">
+          <li>
+            <a href="#" target="_blank"><span class="subject">Zadaca1</span></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><span class="subject">Zadaca2</span></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><span class="subject">Zadaca3</span></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><span class="subject">Zadaca4</span></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>Osobna stranica — Marko Balasko, 4.e</footer>
+  </body>
+</html>
