@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skriptni jezici</title>
+  </head>
+
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 2.5em;
+    }
+
+    p {
+      margin: 8px;
+      color: rgb(96 96 96);
+    }
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      border: 2px solid black;
+    }
+    .da {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .ne {
+      text-align: center;
+      margin-left: 375px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 25px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #c2f8f7;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+
+  <body>
+    <ul class="da">
+      <li class="ne"><a href="./incex1.html" target="_blank">Home</a></li>
+      <li class="ne"><a href="./index2.html" target="_blank">O nama</a></li>
+      <li class="ne">
+        <a href="./index3.html" target="_blank">Kontaktirajte nas</a>
+      </li>
+    </ul>
+
+    <h1>HTML,CSS,Canvas,SVG</h1>
+    <p>
+      <em>Canvas</em> je HTML5 element koji, pomoću JavaScript-a, omogućava
+      dinamičko iscrtavanje <br />
+      različitih oblika, dodavanje slika, kreiranje animacija na web stranici i
+      sl.<br />
+      <br />
+      Na platnu (canvas-u) to ne radimo korištenjem novog jezika (kao što je to
+      slučaj kod SVG) ili <br />
+      korištenjem Flasha. Najčešće uporabe platna su:
+    </p>
+
+    <ul>
+      <li>crtanje grafova</li>
+      <li>animiranje,igre</li>
+      <li>kompozicija slike</li>
+    </ul>
+
+    <hr />
+
+    <p>
+      SVG (<em>Scalable Vector Graphics</em>) grafika ne gubi kvalitetu prilikom
+      zumiranja ili <br />
+      <br />
+      Svi crteži mogu biti interaktivni i dinamički. Svaki element i atribut SVG
+      datoteke može biti<br />
+      animiran. Animacije mogu biti definirane i pokrenute interaktivno ili
+      pomoću skripti.<br />
+      <br />
+      SVG integrira druge W3C standarde kao što su DOM, XSL …
+    </p>
+
+    <hr />
+
+    <table>
+      <tr>
+        <th>SVG</th>
+        <th>HTML canvas</th>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            ima bolju skalabilnost, tako da <br />može imatibolje slikesa
+            velikom kva- <br />litetomna bilo kojoj rezoluciji
+          </p>
+        </td>
+        <td>
+          <p>
+            Canvas ima lošu skalabilnost <br />Nije prikladanza rad s velikim
+            <br />
+            rezolucijama
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            SVG daje bolje performanse sa ma- <br />njim brojem objekata ili
+            većom <br />
+            površinom
+          </p>
+        </td>
+        <td>
+          <p>
+            daje bolje performasese <br />
+            rad s manjim površinama <br />
+            ili vecim brojem objekata
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SVG se može modificirati uz pomoc <br />
+          skripte i css
+        </td>
+        <td>
+          Canvas se može modificirati <br />
+          samo uz pomoc skripte
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SVG je baziran na vektorima i sastav- <br />
+          vljen je od oblika
+        </td>
+        <td>Canvas je baziran na pikselima</td>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <tr>
+        <th>Ime</th>
+        <td>Marko</td>
+      </tr>
+
+      <tr>
+        <th rowspan="2">Telefon</th>
+        <td>555-1234</td>
+      </tr>
+      <tr>
+        <td>555-8745</td>
+      </tr>
+    </table>
+
+    <br />
+    <img src="./fdsfsdfsd.png" alt="slika" />
+    <br />
+    <h1>SVG i Canvas</h1>
+    <svg width="1000" height="1000">
+      <rect
+        x="150"
+        y="230"
+        width="485"
+        height="500"
+        fill="blanchedalmond"
+      ></rect>
+      <rect x="150" y="230" width="485" height="70" fill="blue"></rect>
+      <rect x="635" y="320" width="100" height="150" fill="yellow"></rect>
+      <rect x="50" y="320" width="100" height="150" fill="yellow"></rect>
+      <circle cx="300" cy="440" r="50" fill="white"></circle>
+      <circle cx="490" cy="440" r="50" fill="white"></circle>
+      <circle cx="300" cy="440" r="30" fill="blue"></circle>
+      <circle cx="490" cy="440" r="30" fill="blue"></circle>
+      <circle cx="390" cy="620" r="90" fill="coral"></circle>
+      <rect
+        x="250"
+        y="510"
+        width="285"
+        height="100"
+        fill="blanchedalmond"
+      ></rect>
+      <polygon points="360,600 410,600 385,530" fill="orange"></polygon>
+      <polygon points="300,950 380,880 300,810" fill="blue"></polygon>
+      <polygon points="460,950 380,880 460,810" fill="blue"></polygon>
+      <circle cx="380" cy="880" r="30" fill="yellow"></circle>
+    </svg>
+    <br />
+    <h2>Forma</h2>
+    <form action="#" method="get">
+      <label for="name">Unesi ime:</label><br />
+      <input type="text" id="name" placeholder="Ime" /> <br />
+      <label for="datum">Unesi datum:</label><br />
+      <input type="date" id="datum" placeholder="datum" /> <br />
+      <label for="mail">Unesi gmail:</label><br />
+      <input type="email" id="gmail" placeholder="Gmail" required /> <br />
+      <br />
+      <input type="submit" value="Pošalji" /> <br />
+      <br />
+      <input type="reset" value="reset" />
+    </form>
+  </body>
+</html>
