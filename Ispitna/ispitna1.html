@@ -133,20 +133,26 @@
       </tr>
       <tr>
         <td>
-          SVG se može modificirati uz pomoc <br />
-          skripte i css
+          <p>
+            SVG se može modificirati uz pomoc <br />
+            skripte i css
+          </p>
         </td>
         <td>
-          Canvas se može modificirati <br />
-          samo uz pomoc skripte
+          <p>
+            Canvas se može modificirati <br />
+            samo uz pomoc skripte
+          </p>
         </td>
       </tr>
       <tr>
         <td>
-          SVG je baziran na vektorima i sastav- <br />
-          vljen je od oblika
+          <p>
+            SVG je baziran na vektorima i sastav- <br />
+            ljen je od oblika
+          </p>
         </td>
-        <td>Canvas je baziran na pikselima</td>
+        <td><p>Canvas je baziran na pikselima</p></td>
       </tr>
     </table>
     <br />
@@ -168,7 +174,7 @@
     <br />
     <img src="./fdsfsdfsd.png" alt="slika" />
     <br />
-    <h1>SVG i Canvas</h1>
+    <h1>SVG</h1>
     <svg width="1000" height="1000">
       <rect
         x="150"
@@ -197,9 +203,80 @@
       <polygon points="460,950 380,880 460,810" fill="blue"></polygon>
       <circle cx="380" cy="880" r="30" fill="yellow"></circle>
     </svg>
+    <h1>Canvas</h1>
+    <canvas
+      id="faceCanvas"
+      width="1000"
+      height="1000"
+      style="border: 1px solid black"
+    ></canvas>  
+
+    <script>
+      const canvas = document.getElementById("faceCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "blanchedalmond";
+      ctx.fillRect(150, 230, 485, 500);
+      ctx.fillStyle = "blue";
+      ctx.fillRect(150, 230, 485, 70);
+      ctx.fillStyle = "yellow";
+      ctx.fillRect(635, 320, 80, 120);
+      ctx.fillRect(70, 320, 80, 120);
+
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      ctx.arc(300, 440, 50, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(490, 440, 50, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.fillStyle = "blue";
+      ctx.beginPath();
+      ctx.arc(300, 440, 30, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(490, 440, 30, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.fillStyle = "coral";
+      ctx.beginPath();
+      ctx.arc(390, 600, 90, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.fillStyle = "blanchedalmond";
+      ctx.fillRect(250, 510, 285, 100);
+
+      ctx.fillStyle = "orange";
+      ctx.beginPath();
+      ctx.moveTo(360, 600);
+      ctx.lineTo(400, 600);
+      ctx.lineTo(385, 530);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillStyle = "blue";
+      ctx.beginPath();
+      ctx.moveTo(300, 950);
+      ctx.lineTo(380, 880);
+      ctx.lineTo(300, 810);
+      ctx.closePath();
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(460, 950);
+      ctx.lineTo(380, 880);
+      ctx.lineTo(460, 810);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillStyle = "yellow";
+      ctx.beginPath();
+      ctx.arc(380, 880, 30, 0, 2 * Math.PI);
+      ctx.fill();
+    </script>
+
     <br />
     <h2>Forma</h2>
-    <form action="#" method="get">
+    <form action="./forma.html" method="get">
       <label for="name">Unesi ime:</label><br />
       <input type="text" id="name" placeholder="Ime" /> <br />
       <label for="datum">Unesi datum:</label><br />
