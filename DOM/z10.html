@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./slike/476553.jpg" alt="slika1" />
+
+    <button>promjeni</button>
+
+    <script>
+      let img = document.querySelector("img");
+      let gumb = document.querySelector("button");
+
+      gumb.onclick = function () {
+        img.setAttribute("src", "./slike/images(1).jpg");
+        img.setAttribute("alt", "slika2");
+      };
+    </script>
+  </body>
+</html>

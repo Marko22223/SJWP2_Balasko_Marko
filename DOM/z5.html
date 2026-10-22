@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Gumb</button>
+    <p></p>
+
+    <script>
+      let gumb = document.querySelector("button");
+      let p = document.querySelector("p");
+
+      gumb.onclick = function () {
+        p.textContent = "Stisnuli ste gumb";
+      };
+    </script>
+  </body>
+</html>

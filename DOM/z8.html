@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .istaknuto {
+      background-color: blue;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <button>gumb</button>
+    <div class="kartica"></div>
+
+    <script>
+      let kartica = document.querySelector(".kartica");
+      let gumb = document.querySelector("button");
+
+      gumb.onclick = function () {
+        kartica.classList.toggle("istaknuto");
+      };
+    </script>
+  </body>
+</html>

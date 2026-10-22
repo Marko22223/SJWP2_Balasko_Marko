@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quae
+      maiores quia reprehenderit sit dolor esse quibusdam similique quas
+      exercitationem libero optio reiciendis nulla ad, voluptate dignissimos
+      nemo. Incidunt, aut.
+    </p>
+    <button>Gumb</button>
+
+    <script>
+      let p = document.querySelector("p");
+      let gumb = document.querySelector("button");
+      p.style.display = "block";
+
+      gumb.onclick = function () {
+        if (p.style.display === "block") {
+          p.style.display = "none";
+        } else {
+          p.style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>

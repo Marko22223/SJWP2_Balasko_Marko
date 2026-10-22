@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>gumb</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem recusandae
+      nam neque dicta quam voluptas, minima impedit. Fugit soluta quod et
+      veniam. Facere in praesentium labore dolorum, eos obcaecati optio?
+    </p>
+
+    <script>
+      let gumb = document.querySelector("button");
+      let p = document.querySelector("p");
+
+      gumb.onclick = function () {
+        p.textContent = "Upozorenje";
+        p.style.color = "Red";
+        p.style.fontWeight = "bold";
+        p.style.backgroundColor = "yellow";
+      };
+    </script>
+  </body>
+</html>
