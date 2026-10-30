@@ -1,25 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <button>gumb1</button>
-    <button>gumb2</button>
-    <button>gumb3</button>
+</head>
+<body>
+    <a href="#">druga stranica</a>
+    <button>gumb</button>
 
     <script>
-      let gumbi = document.querySelectorAll("button");
+        let a = document.querySelector("a");
+        let gumb = document.querySelector("button");
 
-      gumbi[0].onclick = function () {
-        gumbi[2].disabled = true;
-      };
-
-      gumbi[1].onclick = function () {
-        gumbi[2].disabled = false;
-      };
+        gumb.onclick = function(){
+            a.setAttribute("href", "./dodatno/index.html");
+        }
     </script>
-  </body>
+</body>
 </html>

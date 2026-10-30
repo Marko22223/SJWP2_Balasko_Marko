@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .svijetla{
+        background-color: aliceblue;
+        width: 300px;
+        height: 300px;
+    }
+    .tamna{
+        background-color: black;
+        width: 300px;
+        height: 300px;
+    }
+</style>
+<body>
+    <div class="svijetla"></div>
+    <button>Promjeni temu</button>
+
+    <script>
+      let kartica = document.querySelector(".svijetla");
+      let gumb = document.querySelector("button");
+        
+      gumb.onclick = function () {
+        kartica.classList.toggle("tamna");
+      };
+    </script>
+</body>
+</html>

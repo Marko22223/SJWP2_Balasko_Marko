@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>gumb1</button>
+    <button>gumb2</button>
+    <button>gumb3</button>
+
+    <script>
+      let gumbi = document.querySelectorAll("button");
+
+      gumbi[0].onclick = function () {
+        gumbi[2].disabled = true;
+      };
+
+      gumbi[1].onclick = function () {
+        gumbi[2].disabled = false;
+      };
+    </script>
+  </body>
+</html>

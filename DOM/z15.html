@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tema{
+        background-color: coral;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+    <button class="da">Tema</button>
+    <div class="svijetla"></div>
+
+    <h1>Ime</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptatibus repudiandae laborum ratione odio deleniti possimus aliquam,
+         facilis illo sunt sapiente recusandae fuga tempore, 
+        officia eveniet soluta ea voluptas dolore repellendus.
+    </p>
+    <img src="./slike/476553.jpg" alt="slika1">
+    <a href="#">link</a>
+
+    <button class="pI">Promjeni Ime</button>
+    <button class="pO">Promjeni Opis</button>
+    <button class="pF">Promjeni Fotografiju</button>
+    
+
+    <script>
+        let h1 = document.querySelector("h1");
+        let p = document.querySelector("p");
+        let img = document.querySelector("img");
+
+        let pI = document.querySelector(".pI");
+        let pO = document.querySelector(".pO");
+        let pF = document.querySelector(".pF");
+        
+        pI.onclick = function(){
+            h1.textContent = "Marko";
+        }
+        pO.onclick = function(){
+            p.textContent = "Opis";
+        }
+        pF.onclick = function(){
+            img.setAttribute("src", "./slike/images (1).jpg");
+        }
+
+        let gumb = document.querySelector(".da");
+
+        gumb.onclick = function () {
+            document.body.classList.toggle("tema")
+        }
+
+    </script>
+</body>
+</html>
