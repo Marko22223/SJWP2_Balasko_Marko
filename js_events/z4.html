@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let p = document.querySelector("p");
+        class Proizvod{
+            constructor(naziv,cijena,kategorija,stanjeZalihe){
+                this.naziv = naziv;
+                this.cijena = cijena;
+                this.kategorija = kategorija;
+                this.stanjeZalihe = stanjeZalihe;
+            }
+        }
+
+        let stvari = [
+            new Proizvod("Laptop", 200, "ElektroničkiUređaj", "5"),
+            new Proizvod("Mobite", 30, "ElektroničkiUređaj", "5"),
+            new Proizvod("Pc", 20, "ElektroničkiUređaj", "5"),
+            new Proizvod("tipkovnica", 200, "ElektroničkiUređaj", "5"),
+            new Proizvod("miš", 10, "ElektroničkiUređaj", "5"),
+            new Proizvod("punjac", 200, "ElektroničkiUređaj", "5")
+        ]
+        
+
+        stvari.forEach(function(proizvod){
+            p.textContent = p.textContent + proizvod.naziv + " " + proizvod.cijena + " eura " + proizvod.kategorija + " " + proizvod.stanjeZalihe + " komada ";
+        })
+    </script>
+</body>
+</html>

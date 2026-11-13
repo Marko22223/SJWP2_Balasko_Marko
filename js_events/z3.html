@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    button{
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+    <input type="text" placeholder="PrviBroj">
+    <input type="text" placeholder="DrugiBroj">
+    <input type="text" placeholder="Operacija(+,-,*,/)">
+    <button>Potvrdi</button>
+
+    <p></p>
+    <script>
+        let btn = document.querySelector("button")
+        let inputi = document.querySelectorAll("input");
+
+        function ocisti(){
+            inputi[0].value = null;
+            inputi[1].value = null;
+            inputi[2].value = null;
+        }
+        function Zbroji(a,b){
+            return a + b;
+        }
+        function Oduzmi(a,b){
+            return a-b;
+        }
+        function Pomnozi(a,b){
+            return a*b;
+        }
+        function Podjeli(a,b){
+            if(b != 0){
+                return a/b;
+            }else{
+                alert("Nemozemo djelit s 0");
+                return;
+            }
+        }
+        function izvrsi(a, b, Operacija){
+            return Operacija(a,b);
+        }
+
+        btn.onclick = function(){
+            if(inputi[2].value === "+"){
+                alert(izvrsi(parseInt(inputi[0].value),parseInt(inputi[1].value), Zbroji));
+                ocisti();
+                return;
+            }
+            if(inputi[2].value === "-"){
+                alert(izvrsi(parseInt(inputi[0].value),parseInt(inputi[1].value), Oduzmi));
+                ocisti();
+                return;
+            }
+            if(inputi[2].value === "*"){
+                alert(izvrsi(parseInt(inputi[0].value),parseInt(inputi[1].value), Pomnozi));
+                ocisti();
+                return;
+            }
+            if(inputi[2].value === "/"){
+                alert(izvrsi(parseInt(inputi[0].value),parseInt(inputi[1].value), Podjeli));
+                ocisti();
+                return;
+            }
+        }
+
+        alert("DA");
+    </script>
+</body>
+</html>

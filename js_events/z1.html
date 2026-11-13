@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="plus">+</button>
+    <button class="minus">-</button>
+    <button class="reset">Reset</button>
+
+    <p>0</p>
+    <script>
+        let gumbPlus = document.querySelector(".plus");
+        let gumbMinus = document.querySelector(".minus");
+        let gumbReset = document.querySelector(".reset");
+
+        let br = document.querySelector("p");
+
+        function Plus(){
+            br.textContent = parseInt(br.textContent) + 1;
+        }
+        function Minus(){
+            br.textContent = parseInt(br.textContent) - 1;
+            
+            if(parseInt(br.textContent) < 0){
+                alert("Broj je negativan")
+            }
+        }
+
+        function Reset(){
+            br.textContent = 0;
+        }
+
+        gumbPlus.addEventListener("click", Plus);
+        gumbMinus.addEventListener("click", Minus);
+        gumbReset.addEventListener("click", Reset)
+    </script>
+</body>
+</html>
