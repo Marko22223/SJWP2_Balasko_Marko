@@ -7,6 +7,9 @@
 </head>
 <body>
     <p></p>
+    <button class="btnSvi">Prikaži sve proizvode</button>
+    <button class="btnSkuplji">Prikaži skuplje od 50 eura</button>
+
     <script>
         let p = document.querySelector("p");
         class Proizvod{
@@ -26,11 +29,28 @@
             new Proizvod("miš", 10, "ElektroničkiUređaj", "5"),
             new Proizvod("punjac", 200, "ElektroničkiUređaj", "5")
         ]
-        
+    
 
-        stvari.forEach(function(proizvod){
-            p.textContent = p.textContent + proizvod.naziv + " " + proizvod.cijena + " eura " + proizvod.kategorija + " " + proizvod.stanjeZalihe + " komada ";
+        let buttonSvi = document.querySelector(".btnSvi");
+        buttonSvi.addEventListener("click", function(){
+            p.innerHTML = "";
+
+            stvari.forEach(function(proizvod){
+                p.innerHTML += "Naziv: " + proizvod.naziv + "<br>" +"Cijena: " + proizvod.cijena + " eura <br>Kategorija: " + proizvod.kategorija + "<br>Zaliha(kom): " + proizvod.stanjeZalihe + "<br><br>";
+            })
         })
+
+        let buttonSkuplji = document.querySelector(".btnSkuplji");
+        buttonSkuplji.addEventListener("click", function(){
+            p.innerHTML = "";
+
+            let skuplji = stvari.filter(Proizvod => Proizvod.cijena > 50);
+
+            skuplji.forEach(function(proizvod){
+                p.innerHTML += "Naziv: " + proizvod.naziv + "<br>" +"Cijena: " + proizvod.cijena + " eura <br>Kategorija: " + proizvod.kategorija + "<br>Zaliha(kom): " + proizvod.stanjeZalihe + "<br><br>";
+            })
+        
+        });
     </script>
 </body>
 </html>
