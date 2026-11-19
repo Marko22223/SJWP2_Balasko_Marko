@@ -1,42 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    .Crveno{
-        margin: 20px;
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        border-radius: 50%;
-        filter: brightness(50%);
+  </head>
+  <style>
+    div {
+      margin: 30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: black;
     }
-    .Zuto{
-        margin: 20px;
-        width: 100px;
-        height: 100px;
-        background-color: yellow;
-        border-radius: 50%;
-        filter: brightness(50%);
-    }
-    .Zeleno{
-        margin: 20px;
-        width: 100px;
-        height: 100px;
-        background-color: green;
-        border-radius: 50%;
-        filter: brightness(50%);
-    }
-</style>
-<body>
-    <div class="Crveno"></div>
-    <div class="Zuto"></div>
-    <div class="Zeleno"></div>
-    <button></button>
-    <button></button>
-    <script></script>
-</body>
+  </style>
+  <body>
+    <div></div>
+
+    <button class="pm">Promjeni boju</button>
+    <button class="uk">Uključi</button>
+    <button class="isK">Isključi</button>
+    <button class="ps">Prikaži stanje</button>
+  </body>
+
+  <script>
+    const semafor = {
+      boja: "black",
+      trajanje: "10",
+    };
+  </script>
 </html>
