@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <button class="btnSvi">Prikaži sve proizvode</button>
+    <button class="btnSkuplji">Prikaži skuplje od 50 eura</button>
+
+    <script>
+        let p = document.querySelector("p");
+        class Proizvod{
+            constructor(naziv,cijena,kategorija,stanjeZalihe){
+                this.naziv = naziv;
+                this.cijena = cijena;
+                this.kategorija = kategorija;
+                this.stanjeZalihe = stanjeZalihe;
+            }
+        }
+
+        let stvari = [
+            new Proizvod("Laptop", 200, "ElektroničkiUređaj", "5"),
+            new Proizvod("Mobite", 30, "ElektroničkiUređaj", "5"),
+            new Proizvod("Pc", 20, "ElektroničkiUređaj", "5"),
+            new Proizvod("tipkovnica", 200, "ElektroničkiUređaj", "5"),
+            new Proizvod("miš", 10, "ElektroničkiUređaj", "5"),
+            new Proizvod("punjac", 200, "ElektroničkiUređaj", "5")
+        ]
+    
+
+        let buttonSvi = document.querySelector(".btnSvi");
+        buttonSvi.addEventListener("click", function(){
+            p.innerHTML = "";
+
+            stvari.forEach(function(proizvod){
+                p.innerHTML += "Naziv: " + proizvod.naziv + "<br>" +"Cijena: " + proizvod.cijena + " eura <br>Kategorija: " + proizvod.kategorija + "<br>Zaliha(kom): " + proizvod.stanjeZalihe + "<br><br>";
+            })
+        })
+
+        let buttonSkuplji = document.querySelector(".btnSkuplji");
+        buttonSkuplji.addEventListener("click", function(){
+            p.innerHTML = "";
+
+            let skuplji = stvari.filter(Proizvod => Proizvod.cijena > 50);
+
+            skuplji.forEach(function(proizvod){
+                p.innerHTML += "Naziv: " + proizvod.naziv + "<br>" +"Cijena: " + proizvod.cijena + " eura <br>Kategorija: " + proizvod.kategorija + "<br>Zaliha(kom): " + proizvod.stanjeZalihe + "<br><br>";
+            })
+        
+        });
+    </script>
+</body>
+</html>
